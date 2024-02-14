@@ -8,13 +8,9 @@ function App() {
         <Player name="player2" symbol="O"/>
 
       </ol>
-  
-
     </div>
-
   </main>;
    
-  
 }
 
 export default App
