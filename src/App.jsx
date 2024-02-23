@@ -63,23 +63,20 @@ let winner;
    
       return updatedTurns;
 
-    });    
+    });
+      
   }
-
   function handleRestart(){
     setGameTurns([]);
   }
   
-  return
-   <main>
+  return <main>
     <div id="game-container">
       <ol id="players" className="highlight-player">
         <Player initialName="player1" symbol="X" isActive={activePlayer === 'X'}/>
         <Player initialName="player2" symbol="O" isActive={activePlayer === 'O'}/>
       </ol>
-      {(winner || hasDraw) && (
-      <GameOver winner={winner} onRestart={handleRestart}/>
-       )}
+      {(winner || hasDraw) && <GameOver winner={winner} onRestart={handleRestart}/>}
       <GameBoard 
       onSelectSquare={handleSelectSquare} 
       board= {gameBoard}
